@@ -11,7 +11,9 @@ export default function ProductDetail() {
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const result = await axios(`http://localhost:4000/products/${id}`);
+      const result = await axios(
+        `https://rh-furniture-api.onrender.com/products/${id}`
+      );
       setProducts([result.data]);
     };
 

@@ -12,12 +12,12 @@ export default function Product() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const result = await axios("http://localhost:4000/products");
+      const result = await axios("https://rh-furniture-api.onrender.com/products");
       setProducts(result.data);
     };
 
     const fetchCategories = async () => {
-      const result = await axios("http://localhost:4000/categories");
+      const result = await axios("https://rh-furniture-api.onrender.com/categories");
       setCategories(result.data);
     };
 
