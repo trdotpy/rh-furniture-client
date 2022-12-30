@@ -1,8 +1,8 @@
 # R+H Furniture - Ecommerce Store
 
-### [Live Demo](https://rh-furniture.onrender.com/)
-
 <img src="./screenshots/desktop-home.png">
+
+#### [Live Demo](https://rh-furniture.onrender.com/) | [Backend Repo](https://github.com/trdotpy/rh-furniture-api)
 
 # Overview
 
