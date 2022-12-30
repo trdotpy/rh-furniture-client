@@ -37,33 +37,31 @@ export default function Navbar() {
 
       <nav className="hidden space-y-2 md:block">
         <div className="flex items-center justify-center">
-          <ul className="flex space-x-4">
+          <div className="flex space-x-4">
             <Link to="/">
-              <li className="cursor-pointer text-sm font-semibold uppercase hover:underline">
+              <p className="cursor-pointer text-sm font-semibold uppercase hover:underline">
                 Home
-              </li>
+              </p>
             </Link>
+
             <Link to="/products">
-              <li className="cursor-pointer text-sm font-semibold uppercase hover:underline">
+              <p className="cursor-pointer text-sm font-semibold uppercase hover:underline">
                 Products
-              </li>
+              </p>
             </Link>
-            {/* <Link to="/account">
-              <li className="cursor-pointer text-sm font-semibold uppercase hover:underline">
-                Account
-              </li>
-            </Link> */}
+
             <Link to="/support">
-              <li className="cursor-pointer text-sm font-semibold uppercase hover:underline">
+              <p className="cursor-pointer text-sm font-semibold uppercase hover:underline">
                 Support
-              </li>
+              </p>
             </Link>
+
             <Link to="/support">
-              <li className="cursor-pointer text-sm font-semibold uppercase hover:underline">
+              <p className="cursor-pointer text-sm font-semibold uppercase hover:underline">
                 FAQ
-              </li>
+              </p>
             </Link>
-          </ul>
+          </div>
         </div>
       </nav>
 

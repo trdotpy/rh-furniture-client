@@ -1,5 +1,6 @@
 import React from "react";
 import { CgClose } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
   const toggleMenu = () => {
@@ -16,23 +17,39 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
             </button>
           </div>
           <div className="m-auto p-4 text-center uppercase text-white">
-            <ul className="flex flex-col space-y-8">
-              <li className="text-2xl font-semibold">
-                <a href="/">Home</a>
-              </li>
-              <li className="text-2xl font-semibold">
-                <a href="/products">Products</a>
-              </li>
-              {/* <li className="text-2xl font-semibold">
-                <a href="/account">Account</a>
-              </li> */}
-              <li className="text-2xl font-semibold">
-                <a href="/support">Support</a>
-              </li>
-              <li className="text-2xl font-semibold">
-                <a href="/support">FAQ</a>
-              </li>
-            </ul>
+            <div className="flex flex-col space-y-8">
+              <div>
+                <Link to="/">
+                  <button onClick={toggleMenu}>
+                    <p className="text-2xl font-semibold">Home</p>
+                  </button>
+                </Link>
+              </div>
+
+              <div>
+                <Link to="/products">
+                  <button onClick={toggleMenu}>
+                    <p className="text-2xl font-semibold">Products</p>
+                  </button>
+                </Link>
+              </div>
+
+              <div>
+                <Link to="/support">
+                  <button onClick={toggleMenu}>
+                    <p className="text-2xl font-semibold">Support</p>
+                  </button>
+                </Link>
+              </div>
+
+              <div>
+                <Link to="/support">
+                  <button onClick={toggleMenu}>
+                    <p className="text-2xl font-semibold">FAQ</p>
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       )}
