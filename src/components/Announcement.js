@@ -7,7 +7,9 @@ export default function Announcement() {
       {/* <p>The New Years Sale</p> */}
       <div className="flex items-center gap-x-2">
         <MdLocalShipping size={20} />
-        <p>FREE 2-Day Shipping!</p>
+        <p className="uppercase tracking-wide">
+          FREE 2-Day Shipping on all orders over $250
+        </p>
       </div>
     </div>
   );

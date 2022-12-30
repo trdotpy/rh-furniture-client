@@ -16,12 +16,12 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
               <CgClose size={30} />
             </button>
           </div>
-          <div className="m-auto p-4 text-center uppercase text-white">
+          <div className="m-auto p-4 text-center text-white">
             <div className="flex flex-col space-y-8">
               <div>
                 <Link to="/">
                   <button onClick={toggleMenu}>
-                    <p className="text-2xl font-semibold">Home</p>
+                    <p className="text-2xl font-semibold uppercase">Home</p>
                   </button>
                 </Link>
               </div>
@@ -29,7 +29,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
               <div>
                 <Link to="/products">
                   <button onClick={toggleMenu}>
-                    <p className="text-2xl font-semibold">Products</p>
+                    <p className="text-2xl font-semibold uppercase">Products</p>
                   </button>
                 </Link>
               </div>
@@ -37,7 +37,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
               <div>
                 <Link to="/support">
                   <button onClick={toggleMenu}>
-                    <p className="text-2xl font-semibold">Support</p>
+                    <p className="text-2xl font-semibold uppercase">Support</p>
                   </button>
                 </Link>
               </div>
@@ -45,7 +45,7 @@ export default function MobileMenu({ isMenuOpen, setIsMenuOpen }) {
               <div>
                 <Link to="/support">
                   <button onClick={toggleMenu}>
-                    <p className="text-2xl font-semibold">FAQ</p>
+                    <p className="text-2xl font-semibold uppercase">FAQ</p>
                   </button>
                 </Link>
               </div>

@@ -30,8 +30,8 @@ export default function Navbar() {
       <div className="hidden flex-1 md:flex">
         <input
           type="text"
-          placeholder="Search products (Coming soon!)"
-          className="w-1/3 rounded-sm border-2 border-gray-200 bg-transparent px-4 py-1 text-sm text-black focus:bg-white focus:text-black focus:outline-none"
+          placeholder="Search (Coming Soon)"
+          className="w-1/3 rounded-sm border-2 border-gray-200 bg-transparent px-4 py-1 text-xs text-black focus:bg-white focus:text-black focus:outline-none"
         />
       </div>
 
