@@ -19,16 +19,18 @@ export default function Cart() {
 
   if (products.cart.length < 1) {
     return (
-      <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <div className="mx-auto max-w-screen-xl py-8">
         <div className="mx-auto max-w-3xl">
-          <header className="space-y-2 text-center">
+          <div className="space-y-4 text-center">
             <h1 className="text-xl font-bold uppercase text-gray-900 sm:text-2xl">
               Your cart is empty.
             </h1>
-            <p className="text-sm font-bold uppercase text-gray-900 md:text-base">
-              Explore Products
-            </p>
-          </header>
+            <Link to="/products">
+              <p className="cursor-pointer text-sm font-bold uppercase text-gray-900 hover:underline md:text-base">
+                Explore Products
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     );
