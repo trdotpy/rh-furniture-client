@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { addToCart } from "../app/features/CartSlice";
+import Spinner from "./Spinner";
 
 export default function ProductDetail() {
   const [products, setProducts] = useState([]);
   const [moreProducts, setMoreProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
   const { id } = useParams();
 
@@ -16,6 +18,7 @@ export default function ProductDetail() {
         `https://rh-furniture-api.onrender.com/products/${id}`
       );
       setProducts([result.data]);
+      setIsLoading(false);
     };
 
     fetchProduct();
@@ -37,8 +40,12 @@ export default function ProductDetail() {
     fetchMoreProducts();
   }, []);
 
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
-    <div className="container mx-auto py-8 bg-white">
+    <div className="container mx-auto bg-white py-8">
       {products.map((product) => (
         <div key={product.id} className="flex flex-wrap">
           <div className="w-full md:w-1/2">
