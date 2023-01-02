@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import {
   removeFromCart,
   incrementProduct,
@@ -37,23 +38,29 @@ export default function Cart() {
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <header className="text-center">
-            <h1 className="text-xl font-bold text-gray-900 sm:text-3xl">
-              Your Cart
+            <h1 className="text-2xl font-bold uppercase text-gray-900 sm:text-3xl">
+              Shopping Cart
             </h1>
           </header>
 
           <div className="mt-8">
             {products?.cart?.map((product) => (
-              <ul key={product.id} className="space-y-4">
-                <li className="flex items-center">
-                  <img
-                    src={product.imageUrl}
-                    alt={product.name}
-                    className="h-28 w-28 rounded object-cover"
-                  />
+              <div key={product.id} className="space-y-4">
+                <div className="flex items-center">
+                  <Link to={`/products/${product._id}`}>
+                    <img
+                      src={product.imageUrl}
+                      alt={product.name}
+                      className="h-28 w-28 rounded object-cover"
+                    />
+                  </Link>
 
                   <div className="ml-4">
-                    <h3 className="text-md text-gray-900">{product.name}</h3>
+                    <Link to={`/products/${product._id}`}>
+                      <h3 className="md:text-md cursor-pointer text-sm text-gray-900 hover:underline">
+                        {product.name}
+                      </h3>
+                    </Link>
 
                     <div className="mt-0.5 space-y-px text-sm text-gray-600">
                       <p>${product.price}</p>
@@ -102,8 +109,8 @@ export default function Cart() {
                       </svg>
                     </button>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </div>
             ))}
 
             <div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
@@ -127,12 +134,6 @@ export default function Cart() {
 
                 <div className="flex justify-end">
                   <StripeCheckout products={products.cart} />
-
-                  {/* <Link to="/checkout">
-                  <button className="block rounded bg-gray-700 px-5 py-3 text-sm font-semibold uppercase text-white transition hover:bg-gray-600">
-                    Checkout
-                  </button>
-                  </Link> */}
                 </div>
               </div>
             </div>
