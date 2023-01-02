@@ -13,7 +13,7 @@ import CheckoutSuccess from "./pages/CheckoutSuccess";
 
 export default function App() {
   return (
-    <>
+    <div className="h-screen">
       <Announcement />
       <Navbar />
       <Routes>
@@ -26,6 +26,6 @@ export default function App() {
         <Route path="/support" element={<CustomerService />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }

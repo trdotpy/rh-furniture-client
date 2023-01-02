@@ -19,7 +19,7 @@ export default function Cart() {
 
   if (products.cart.length < 1) {
     return (
-      <div className="mx-auto max-w-screen-xl py-8">
+      <div className="mx-auto max-w-screen-xl py-12">
         <div className="mx-auto max-w-3xl">
           <div className="space-y-4 text-center">
             <h1 className="text-xl font-bold uppercase text-gray-900 sm:text-2xl">
