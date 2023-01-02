@@ -4,26 +4,46 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import Card from "../components/Card";
+import Spinner from "./Spinner";
 
 export default function Product() {
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const dispatch = useDispatch();
 
+  // Fetch all products
   useEffect(() => {
     const fetchProducts = async () => {
-      const result = await axios("https://rh-furniture-api.onrender.com/products");
-      setProducts(result.data);
-    };
-
-    const fetchCategories = async () => {
-      const result = await axios("https://rh-furniture-api.onrender.com/categories");
-      setCategories(result.data);
+      try {
+        const result = await axios(
+          "https://rh-furniture-api.onrender.com/products"
+        );
+        setProducts(result.data);
+        setIsLoading(false);
+      } catch (error) {
+        console.error(error);
+      }
     };
 
     fetchProducts();
-    fetchCategories();
   }, []);
+
+  // Fetch all categories
+  // useEffect(() => {
+  //   const fetchCategories = async () => {
+  //     const result = await axios(
+  //       "https://rh-furniture-api.onrender.com/categories"
+  //     );
+  //     setCategories(result.data);
+  //   };
+
+  //   fetchCategories();
+  // }, []);
+
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <div className="mx-auto pt-4">
@@ -31,7 +51,7 @@ export default function Product() {
       {/* Categories */}
       {/* <div className="py-4">
         <div className="flex w-full flex-wrap justify-center space-x-6 py-2 font-medium text-black">
-          <div className="cursor-pointer hover:underline">All</div>
+          <div className="cursor-pointer hover:underline">ALL</div>
           {categories.map((category) => (
             <div
               key={category.id}
@@ -48,11 +68,13 @@ export default function Product() {
         {products.map((product) => (
           <div key={product.id} className="mb-4 w-full px-2 md:w-1/2">
             <div className="rounded bg-white p-6">
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className="mx-auto h-52 w-screen rounded-t object-cover md:h-96"
-              />
+              <Link to={`/products/${product._id}`}>
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="mx-auto h-52 w-screen rounded-t object-cover md:h-96"
+                />
+              </Link>
               <div className="pt-4">
                 <Link to={`/products/${product._id}`}>
                   <h3 className="mb-2 cursor-pointer text-xl font-bold hover:underline">

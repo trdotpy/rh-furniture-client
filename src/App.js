@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Announcement from "./components/Announcement";
 import Footer from "./components/Footer";
 import Landing from "./pages/Landing";
@@ -13,12 +13,11 @@ import CheckoutSuccess from "./pages/CheckoutSuccess";
 
 export default function App() {
   return (
-    <Router>
+    <>
       <Announcement />
       <Navbar />
-
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route exact path="/" element={<Landing />} />
         <Route path="/products" element={<Product />} />
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="*" element={<Error />} />
@@ -27,6 +26,6 @@ export default function App() {
         <Route path="/support" element={<CustomerService />} />
       </Routes>
       <Footer />
-    </Router>
+    </>
   );
 }
