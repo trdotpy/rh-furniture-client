@@ -67,7 +67,7 @@ export default function Product() {
       <div className="flex flex-wrap">
         {products.map((product) => (
           <div key={product.id} className="mb-4 w-full px-2 md:w-1/2">
-            <div className="rounded bg-white p-6">
+            <div className="rounded border-t-2 p-6">
               <Link to={`/products/${product._id}`}>
                 <img
                   src={product.imageUrl}
@@ -90,7 +90,7 @@ export default function Product() {
                   </span>
 
                   <button
-                    className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold text-white hover:brightness-110"
+                    className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold text-white hover:brightness-110 uppercase"
                     onClick={() => dispatch(addToCart(product))}
                   >
                     Add to Cart

@@ -6,7 +6,7 @@ export default function Featured() {
     <div>
       <div className="grid-cols-2 flex-wrap md:grid">
         {/* Featured Cards */}
-        <div className="relative h-96 w-full overflow-hidden">
+        <div className="relative h-96 w-full overflow-hidden transition duration-500 hover:brightness-125">
           <Link to="/products/63a21998aae7120aea1354df">
             <img
               className="absolute inset-0 h-full w-full object-cover"
@@ -22,7 +22,7 @@ export default function Featured() {
           </Link>
         </div>
 
-        <div className="relative h-96 w-full overflow-hidden">
+        <div className="relative h-96 w-full overflow-hidden transition duration-500 hover:brightness-125">
           <Link to="/products/63a219e9aae7120aea1354e2">
             <img
               className="absolute inset-0 h-full w-full"
@@ -38,7 +38,7 @@ export default function Featured() {
           </Link>
         </div>
 
-        <div className="relative h-96 w-full overflow-hidden">
+        <div className="relative h-96 w-full overflow-hidden transition duration-500 hover:brightness-125">
           <Link to="/products/63a21a3aaae7120aea1354e5">
             <img
               className="absolute inset-0 h-full w-full object-cover"
@@ -54,7 +54,7 @@ export default function Featured() {
           </Link>
         </div>
 
-        <div className="relative h-96 w-full overflow-hidden">
+        <div className="relative h-96 w-full overflow-hidden transition duration-500 hover:brightness-125">
           <Link to="/products/63acb1023d3e2da775e0d27a">
             <img
               className="absolute inset-0 h-full w-full"

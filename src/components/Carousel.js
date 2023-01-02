@@ -43,7 +43,7 @@ export default function Carousel() {
         <p className="text-5xl font-bold tracking-wide text-white">R+H</p>
         <p className="text-4xl font-bold tracking-wide text-white">Furniture</p>
         <Link to="/products">
-          <button className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white md:text-lg">
+          <button className="mt-1.5 inline-block bg-black px-5 py-3 text-sm font-bold uppercase tracking-wide text-gray-100 hover:brightness-150 md:text-xl">
             Explore the 2023 collection
           </button>
         </Link>

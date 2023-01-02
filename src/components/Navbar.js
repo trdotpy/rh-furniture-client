@@ -16,7 +16,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="flex items-center justify-between space-x-4 border-b bg-white py-3 px-10">
+    <header className="flex items-center justify-between space-x-4 border-b py-2 px-10">
       {/* Logo */}
       <div className="flex">
         <a href="/">

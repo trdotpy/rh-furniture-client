@@ -38,7 +38,7 @@ export default function ProductDetail() {
   }, []);
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 bg-white">
       {products.map((product) => (
         <div key={product.id} className="flex flex-wrap">
           <div className="w-full md:w-1/2">
@@ -58,7 +58,7 @@ export default function ProductDetail() {
                 ${product.price}
               </span>
               <button
-                className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold text-white hover:brightness-110"
+                className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold uppercase text-white hover:brightness-110"
                 onClick={() => dispatch(addToCart(product))}
               >
                 Add to Cart
@@ -92,7 +92,7 @@ export default function ProductDetail() {
                         ${product.price.toFixed(2)}
                       </span>
                       <button
-                        className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold text-white hover:brightness-110"
+                        className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold uppercase text-white hover:brightness-110"
                         onClick={() => dispatch(addToCart(product))}
                       >
                         Add to Cart
