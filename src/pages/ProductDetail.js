@@ -28,7 +28,7 @@ export default function ProductDetail() {
             <img
               src={product.imageUrl}
               alt={product.name}
-              className="mx-auto h-1/2 w-full object-cover md:h-full"
+              className="mx-auto h-full w-full object-cover"
             />
           </div>
 
