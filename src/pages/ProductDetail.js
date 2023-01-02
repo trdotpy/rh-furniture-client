@@ -68,7 +68,7 @@ export default function ProductDetail() {
 
           {/* More Products */}
           <div className="mt-20">
-            <h2 className="mb-4 text-xl font-semibold">See More</h2>
+            <h2 className="mb-4 text-xl font-semibold">Explore</h2>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {moreProducts.slice(0, 3).map((product) => (
                 <div key={product.id} className="relative shadow-md">
@@ -76,7 +76,7 @@ export default function ProductDetail() {
                     <img
                       src={product.imageUrl}
                       alt={product.name}
-                      className="mx-auto h-48 w-full object-cover"
+                      className="mx-auto h-64 w-full object-cover"
                     />
                   </Link>
 
