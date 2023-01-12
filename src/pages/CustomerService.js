@@ -2,11 +2,11 @@ import React from "react";
 
 export default function CustomerService() {
   return (
-    <div className="container mx-auto py-8">
+    <div className="mx-auto bg-gray-100 px-40 py-8">
       <h1 className="mb-4 text-4xl font-semibold text-gray-800">
         Customer Service
       </h1>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-40 md:grid-cols-2">
         <div>
           <h2 className="mb-4 text-2xl font-semibold text-gray-800">
             Frequently Asked Questions
@@ -90,7 +90,7 @@ export default function CustomerService() {
                   Name
                 </label>
                 <input
-                  className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+                  className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-100 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
                   type="text"
                   name="name"
                   id="name"
@@ -107,7 +107,7 @@ export default function CustomerService() {
                   Email
                 </label>
                 <input
-                  className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+                  className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-100 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
                   type="email"
                   name="email"
                   id="email"
@@ -124,7 +124,7 @@ export default function CustomerService() {
                   Subject
                 </label>
                 <input
-                  className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-200 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
+                  className="mb-3 block w-full appearance-none rounded border border-gray-200 bg-gray-100 py-3 px-4 leading-tight text-gray-700 focus:border-gray-500 focus:bg-white focus:outline-none"
                   type="text"
                   name="subject"
                   id="subject"

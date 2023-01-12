@@ -2,9 +2,12 @@ import React from "react";
 
 export default function StripeCheckout({ products }) {
   return (
-    <form action="https://rh-furniture-api.onrender.com/create-checkout-session" method="POST">
+    <form
+      action="https://rh-furniture-api.onrender.com/create-checkout-session"
+      method="POST"
+    >
       <input type="hidden" name="products" value={JSON.stringify(products)} />
-      <button className="block rounded bg-[#d4b27e] px-5 py-3 text-sm font-semibold uppercase text-white transition">
+      <button className="text-md rounded-lg border bg-gray-800 py-2.5 px-5 font-semibold text-gray-100">
         Checkout
       </button>
     </form>

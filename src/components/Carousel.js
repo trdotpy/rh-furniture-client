@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const slides = [
   {
-    url: "https://images.unsplash.com/photo-1592401526914-7e5d94a8d6fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    url: "https://images.unsplash.com/photo-1611486212355-d276af4581c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
   },
   {
     url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80",
@@ -33,10 +33,10 @@ export default function Carousel() {
   };
 
   return (
-    <div className="group relative m-auto h-[560px] w-full">
+    <div className="group relative m-auto h-[740px] w-full">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className="h-full w-full rounded-sm bg-cover bg-center duration-200"
+        className="h-full w-full rounded-xl bg-cover bg-center duration-200"
       ></div>
 
       <div className="text-overlay absolute top-0 left-0 flex h-full w-full flex-col items-center justify-center space-y-2 bg-black/20 uppercase">

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Hero() {
+export default function ProductBanner() {
   return (
     <div
       className="bg-cover bg-center bg-no-repeat py-36"

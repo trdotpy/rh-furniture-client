@@ -6,6 +6,7 @@ import {
   incrementProduct,
   decrementProduct,
 } from "../app/features/CartSlice";
+import ProductGrid from "../components/Home/ProductGrid";
 import StripeCheckout from "../components/StripeCheckout";
 
 export default function Cart() {
@@ -19,7 +20,7 @@ export default function Cart() {
 
   if (products.cart.length < 1) {
     return (
-      <div className="mx-auto max-w-screen-xl py-12">
+      <div className="h-screen bg-gray-100 py-60">
         <div className="mx-auto max-w-3xl">
           <div className="space-y-4 text-center">
             <h1 className="text-xl font-bold uppercase text-gray-900 sm:text-2xl">
@@ -36,11 +37,11 @@ export default function Cart() {
     );
   }
   return (
-    <section>
+    <section className="bg-gray-100">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <header className="text-center">
-            <h1 className="text-2xl font-bold uppercase text-gray-900 sm:text-3xl">
+            <h1 className="text-2xl font-semibold uppercase text-gray-900 sm:text-3xl">
               Shopping Cart
             </h1>
           </header>
@@ -53,13 +54,13 @@ export default function Cart() {
                     <img
                       src={product.imageUrl}
                       alt={product.name}
-                      className="h-28 w-28 rounded object-cover"
+                      className="h-36 w-36 rounded object-cover"
                     />
                   </Link>
 
                   <div className="ml-4">
                     <Link to={`/products/${product._id}`}>
-                      <h3 className="md:text-md cursor-pointer text-sm text-gray-900 hover:underline">
+                      <h3 className="cursor-pointer text-sm text-gray-900 hover:underline md:text-lg">
                         {product.name}
                       </h3>
                     </Link>
@@ -83,7 +84,7 @@ export default function Cart() {
                         min="1"
                         value={product.quantity}
                         id="Line1Qty"
-                        className="h-8 w-12 rounded border-gray-200 bg-gray-50 p-0 text-center text-xs text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                        className="h-8 w-12 rounded border-gray-600 bg-gray-50 p-0 text-center text-sm text-gray-600 [-moz-appearance:_textfield] focus:outline-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
                       />
                     </div>
 
@@ -101,7 +102,7 @@ export default function Cart() {
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="currentColor"
-                        className="h-4 w-4"
+                        className="h-5 w-5"
                       >
                         <path
                           strokeLinecap="round"
@@ -115,7 +116,7 @@ export default function Cart() {
               </div>
             ))}
 
-            <div className="mt-8 flex justify-end border-t border-gray-100 pt-8">
+            <div className="mt-8 flex justify-end border-t border-gray-400 pt-8">
               <div className="w-screen max-w-lg space-y-4">
                 <div className="space-y-0.5 text-sm text-gray-700">
                   <div className="flex justify-between">
@@ -140,6 +141,9 @@ export default function Cart() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="mt-12 px-12">
+          <ProductGrid />
         </div>
       </div>
     </section>

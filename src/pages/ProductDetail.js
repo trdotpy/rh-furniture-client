@@ -45,27 +45,28 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="container mx-auto bg-white py-8">
+    // <div className="bg-gray-100 px-40 py-12">
+    <div className="bg-gray-100 p-8 py-12 sm:px-40">
       {products.map((product) => (
         <div key={product.id} className="flex flex-wrap">
           <div className="w-full md:w-1/2">
             <img
               src={product.imageUrl}
               alt={product.name}
-              className="mx-auto h-full w-full object-cover"
+              className="mx-auto h-full w-full rounded-xl object-cover"
             />
           </div>
 
           <div className="w-full flex-1 space-y-4 px-4 md:w-1/2">
-            <h1 className="pt-2 text-3xl font-bold">{product.name}</h1>
-            <p className="text-sm text-gray-600"> {product.description}</p>
+            <h1 className="pt-2 text-3xl font-medium">{product.name}</h1>
+            <p className="text-sm text-gray-500"> {product.description}</p>
 
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-black">
                 ${product.price}
               </span>
               <button
-                className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold uppercase text-white hover:brightness-110"
+                className="rounded-lg border bg-gray-900 py-2 px-4 text-sm font-semibold uppercase text-gray-100"
                 onClick={() => dispatch(addToCart(product))}
               >
                 Add to Cart
@@ -74,16 +75,16 @@ export default function ProductDetail() {
           </div>
 
           {/* More Products */}
-          <div className="mt-20">
-            <h2 className="mb-4 text-xl font-semibold">Explore</h2>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-20 p-8 sm:px-20">
+            <h2 className="mb-4 text-2xl uppercase">Explore</h2>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {moreProducts.slice(0, 3).map((product) => (
-                <div key={product.id} className="relative shadow-md">
+                <div key={product.id} className="relative">
                   <Link to={`/products/${product._id}`}>
                     <img
                       src={product.imageUrl}
                       alt={product.name}
-                      className="mx-auto h-64 w-full object-cover"
+                      className="mx-auto h-64 w-full rounded-xl object-cover"
                     />
                   </Link>
 
@@ -95,11 +96,11 @@ export default function ProductDetail() {
                     </Link>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold text-black">
+                      <span className="text-xl font-bold text-black">
                         ${product.price.toFixed(2)}
                       </span>
                       <button
-                        className="rounded-sm bg-[#d4b27e] py-2 px-4 text-sm font-semibold uppercase text-white hover:brightness-110"
+                        className="rounded-lg border bg-gray-900 py-2 px-4 text-sm font-semibold uppercase text-gray-100"
                         onClick={() => dispatch(addToCart(product))}
                       >
                         Add to Cart
@@ -110,7 +111,6 @@ export default function ProductDetail() {
               ))}
             </div>
           </div>
-          {/*  */}
         </div>
       ))}
     </div>
