@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Announcement from "./components/Announcement";
-import Footer from "./components/Footer";
+import Announcement from "./components/Layout/Announcement";
+import Footer from "./components/Layout/Footer";
 import ProductDetail from "./pages/ProductDetail";
 import CustomerService from "./pages/CustomerService";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Layout/Navbar";
 import Cart from "./pages/Cart";
 import Error from "./pages/Error";
 import CheckoutSuccess from "./pages/CheckoutSuccess";

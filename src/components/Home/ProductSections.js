@@ -9,7 +9,7 @@ export default function ProductSections() {
           <Link to="/products">
             <img
               src="https://cb2.scene7.com/is/image/CB2/123120_super_furniture_bestsellers?wid=1000&qlt=50"
-              alt="image"
+              alt="best sellers"
               className="rounded-xl bg-no-repeat brightness-75 hover:brightness-50"
             />
             <h1 className="absolute bottom-0 right-0 p-4 font-bold uppercase text-gray-100 sm:text-3xl">
@@ -21,7 +21,7 @@ export default function ProductSections() {
           <Link to="/products">
             <img
               src="https://cb2.scene7.com/is/image/CB2/090122_super_furniture_livingRoom?wid=1000&qlt=50"
-              alt="image"
+              alt="products"
               className="rounded-xl brightness-75 hover:brightness-50"
             />
             <div className="absolute bottom-0 left-0 p-4 text-2xl font-bold uppercase text-gray-100">
@@ -34,7 +34,7 @@ export default function ProductSections() {
           <Link to="/products">
             <img
               src="https://cb2.scene7.com/is/image/CB2/090122_super_furniture_bedroom?wid=1000&qlt=50"
-              alt="image"
+              alt="products"
               className="rounded-xl brightness-75 hover:brightness-50"
             />
             <div className="absolute bottom-0 left-0 p-4 text-2xl font-bold uppercase text-gray-100">
@@ -47,7 +47,7 @@ export default function ProductSections() {
           <Link to="/products">
             <img
               src="https://cb2.scene7.com/is/image/CB2/090122_super_furniture_storageMedia?wid=1000&qlt=50"
-              alt="image"
+              alt="products"
               className="rounded-xl brightness-75 hover:brightness-50"
             />
             <div className="absolute bottom-0 left-0 p-4 text-2xl font-bold uppercase text-gray-100">
@@ -60,7 +60,7 @@ export default function ProductSections() {
           <Link to="/products">
             <img
               src="https://cb2.scene7.com/is/image/CB2/090122_super_furniture_office?wid=1000&qlt=50"
-              alt="image"
+              alt="products"
               className="rounded-xl brightness-75 hover:brightness-50"
             />
             <div className="absolute bottom-0 left-0 p-4 text-2xl font-bold uppercase text-gray-100">
