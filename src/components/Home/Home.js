@@ -4,7 +4,7 @@ import ProductSections from "./ProductSections";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100 px-40 py-10">
+    <div className="bg-gray-100 px-10 sm:px-40 sm:py-10">
       <ProductSections />
       <Hero />
     </div>

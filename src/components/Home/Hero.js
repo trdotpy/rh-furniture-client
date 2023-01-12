@@ -4,8 +4,8 @@ import ProductGrid from "./ProductGrid";
 
 export default function Hero() {
   return (
-    <div className="relative hidden h-[1000px] items-center rounded-xl bg-gray-100 text-black lg:flex lg:space-y-32 lg:px-20">
-      <section className="absolute top-0 flex w-full flex-col space-y-4 py-32 md:w-9/12 xl:w-8/12">
+    <div className="relative hidden h-[1000px] items-center rounded-xl bg-gray-200 text-black lg:flex lg:space-y-32 lg:px-20">
+      <section className="absolute top-0 flex w-full flex-col space-y-4 py-20 md:w-9/12 xl:w-8/12">
         <div>
           <span className="text-xl font-bold uppercase tracking-wider">
             Sale
@@ -16,7 +16,7 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div>
+        <div className="py-4">
           <p className="mb-2 text-2xl font-bold">
             Elevate your space with our modern furniture designs.
           </p>
@@ -26,8 +26,8 @@ export default function Hero() {
         </div>
       </section>
 
-      <section className="absolute left-0 bottom-0 w-full p-6 lg:p-20">
-        <div className="flex justify-between">
+      <section className="absolute left-0 w-full p-20">
+        <div>
           <div>
             <h1 className="mb-2 text-3xl font-bold">New</h1>
             <span>Shop the latest interior design trends.</span>
@@ -36,7 +36,7 @@ export default function Hero() {
         <ProductGrid />
       </section>
 
-      <section className="absolute right-0 bottom-0">
+      <section className="absolute right-0 bottom-0 p-20">
         <Link to="/products">
           <button className="flex gap-2 rounded-xl bg-gray-800 px-6 py-3 font-bold text-gray-100 transition duration-700 hover:bg-gray-400">
             Shop Now

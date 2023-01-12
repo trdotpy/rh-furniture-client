@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function ProductSections() {
   return (
     <div className="mx-auto">
-      <div className="grid grid-cols-1 gap-4 rounded-xl bg-gray-100 py-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+      <div className="grid gap-4 rounded-xl bg-gray-100 py-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
         <div className="relative w-full rounded sm:col-span-2 sm:row-span-2">
           <Link to="/products">
             <img
@@ -12,7 +12,7 @@ export default function ProductSections() {
               alt="best sellers"
               className="rounded-xl bg-no-repeat brightness-75 hover:brightness-50"
             />
-            <h1 className="absolute bottom-0 right-0 p-4 font-bold uppercase text-gray-100 sm:text-3xl">
+            <h1 className="absolute bottom-0 left-0 p-4 text-2xl font-bold uppercase text-gray-100 sm:text-4xl">
               Best Sellers
             </h1>
           </Link>
