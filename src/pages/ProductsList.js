@@ -60,7 +60,7 @@ export default function ProductsList() {
   }
 
   return (
-    <div className="rounded-xl bg-gray-100">
+    <div className="rounded-xl bg-gray-100 px-32">
       <div>
         {/* Mobile filter dialog */}
         <Transition.Root show={mobileFiltersOpen} as={Fragment}>

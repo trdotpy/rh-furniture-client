@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import { useSelector } from "react-redux";
 
-
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const cart = useSelector((state) => state.cart.cart);
@@ -16,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="flex items-center justify-between space-x-4 bg-gray-100 py-4 px-40">
+    <header className="flex items-center justify-between space-x-4 bg-gray-100 py-4 sm:px-40 px-10">
       {/* Logo */}
       <div>
         <a href="/">
