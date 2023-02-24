@@ -1,6 +1,6 @@
 <div align='center'>
 
-# SocialSphere - Social Media App
+# Real Home Furniture - eCommerce Application
 
 <!-- Hero -->
 
@@ -14,7 +14,7 @@
   		<img src='https://img.shields.io/badge/Backend-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white'>
   </div>
 </a>
-	
+
 
 </div>
 
@@ -71,8 +71,6 @@
 <div align='left'>
 
 Real Home Furniture is a full stack web application built using the MERN (MongoDB, Express, React, and Node.js) stack. The front end of the application is built using React and Redux, and makes use of Axios for API calls and Tailwind CSS for styling. The back end of the application is built using Express, and makes use of Bcrypt for password hashing, Body-Parser for parsing incoming request bodies, Cors for enabling cross-origin resource sharing, Helmet for adding security headers to the application, Jsonwebtoken for generating and verifying JSON web tokens, and Mongoose for interacting with the MongoDB database.
-
-This application is fully responsive and provides a seamless user experience on both desktop and mobile devices. It also offers a range of CRUD endpoints for managing products, categories, and user accounts. In addition, the application includes a Stripe integration for handling payments and creating checkout sessions.
 
 </div>
 
